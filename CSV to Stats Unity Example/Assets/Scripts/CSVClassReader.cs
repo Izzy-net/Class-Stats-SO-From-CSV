@@ -59,11 +59,11 @@ public class CSVClassReader
 
             float[] values = new float[levels];  //initialise array with length equal to the levels for which progression is supported
             int maxIndex = levels + 2;           //WARNING: maxIndex is the index of the final level in currentRow - this is dependent on spreadsheet layout
-            for (int r = 2; r < maxIndex; r++)   //WARNING: start at r=4 because level values start at the 5th column of the spreadsheet
+            for (int r = 2; r < maxIndex; r++)   //WARNING: start at r=2 because level values start at the 3rd column of the spreadsheet
             {
                 if (float.TryParse(currentRow[r], out var value))
                 {
-                    values[r - 2] = value;       //r-4 will place the value in the right place in values (r-4=0 on the first loop)
+                    values[r - 2] = value;       //r-2 will place the value in the right place in values (r-2=0 on the first loop)
                 }
                 else
                 {

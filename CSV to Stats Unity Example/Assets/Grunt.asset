@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a9c23eec7cecbb46aeea86b115ee865, type: 3}
+  m_Script: {fileID: 11500000, guid: 39777fd5006b30e48a42f2b90e770099, type: 3}
   m_Name: Grunt
-  m_EditorClassIdentifier: Assembly-CSharp::CharacterClassSO
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyClassSO
   CSVFile: {fileID: 4900000, guid: dfb29ea8dde115947b394e220d772955, type: 3}
   health:
   - 60
@@ -29,6 +29,22 @@ MonoBehaviour:
   - 420
   - 450
   - 480
+  damage:
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
   experienceFromDeath:
   - 80
   - 120
@@ -45,5 +61,3 @@ MonoBehaviour:
   - 560
   - 600
   - 640
-  experienceToLevel: []
-  damage: []

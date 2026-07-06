@@ -15,6 +15,11 @@ public class CSVPopulableSOEditor : Editor
             Debug.Log("populate");
             myPopulableClassSO.PopulateFromCSV();   //method to run on target when button is pressed
         }
+
+        if (GUILayout.Button("Modify Stats"))
+        {
+            myPopulableClassSO.Modify();
+        }
     }
 }
 //See tutorial :: https://learn.unity.com/tutorial/editor-scripting#5c7f8528edbc2a002053b5f7
