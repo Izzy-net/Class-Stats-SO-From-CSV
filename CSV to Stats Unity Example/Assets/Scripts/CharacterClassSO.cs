@@ -65,7 +65,7 @@ public class CharacterClassSO : CSVPopulableClassSO
             experienceToLevel = data["Cumulative Experience"];
         }
 
-        if (data.ContainsKey("Base Damage (per hit)"))
+        if (data.ContainsKey("Base Damage"))
         {
             damage = data["Base Damage (per hit)"];
         }

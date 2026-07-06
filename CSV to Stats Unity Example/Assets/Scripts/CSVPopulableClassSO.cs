@@ -1,8 +1,9 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.IO;
 
 #if UNITY_EDITOR
-    public abstract class CSVPopulableClassSO : ScriptableObject 
+public abstract class CSVPopulableClassSO : ScriptableObject 
     {
         [SerializeField] private TextAsset CSVFile;
 

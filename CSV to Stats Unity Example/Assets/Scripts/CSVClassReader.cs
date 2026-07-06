@@ -58,12 +58,12 @@ public class CSVClassReader
             }
 
             float[] values = new float[levels];  //initialise array with length equal to the levels for which progression is supported
-            int maxIndex = levels + 4;           //WARNING: maxIndex is the index of the final level in currentRow - this is dependent on spreadsheet layout
-            for (int r = 4; r < maxIndex; r++)   //WARNING: start at r=4 because level values start at the 5th column of the spreadsheet
+            int maxIndex = levels + 2;           //WARNING: maxIndex is the index of the final level in currentRow - this is dependent on spreadsheet layout
+            for (int r = 2; r < maxIndex; r++)   //WARNING: start at r=4 because level values start at the 5th column of the spreadsheet
             {
                 if (float.TryParse(currentRow[r], out var value))
                 {
-                    values[r - 4] = value;       //r-4 will place the value in the right place in values (r-4=0 on the first loop)
+                    values[r - 2] = value;       //r-4 will place the value in the right place in values (r-4=0 on the first loop)
                 }
                 else
                 {
@@ -78,13 +78,14 @@ public class CSVClassReader
     private static int FindValidLevels(string[] row)  //find number of levels for progression so it remains consistent
     {                                                 //change if levels aren't the same for enemies vs player etc
         int levels = 0;
-        for (int i = 4; i < row.Length; i++)          //WARNING: dependent on spreadsheet layout
+        for (int i = 2; i < row.Length; i++)          //WARNING: dependent on spreadsheet layout
         {
             if (int.TryParse(row[i], out int result))
             {
                 levels += 1;
             }
         }
+        Debug.Log(levels);
         return levels;
     }
 }
