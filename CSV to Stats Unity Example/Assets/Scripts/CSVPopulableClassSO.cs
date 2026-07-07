@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections.Generic;
-using System.IO;
 
 #if UNITY_EDITOR
 public abstract class CSVPopulableClassSO : ScriptableObject 
@@ -17,9 +16,12 @@ public abstract class CSVPopulableClassSO : ScriptableObject
 
     public void Modify()
     {
-        
+        ModifyData();
+        ResetModifiers();
     }
 
     protected abstract void PopulateData(Dictionary<string, Dictionary<string, float[]>> dictionary);
+    protected abstract void ModifyData();
+    protected abstract void ResetModifiers();
 }
 #endif

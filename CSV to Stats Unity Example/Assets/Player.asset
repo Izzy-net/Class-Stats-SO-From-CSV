@@ -13,6 +13,61 @@ MonoBehaviour:
   m_Name: Player
   m_EditorClassIdentifier: Assembly-CSharp::PlayerClassSO
   CSVFile: {fileID: 4900000, guid: dfb29ea8dde115947b394e220d772955, type: 3}
-  health: []
-  damage: []
-  experienceToLevel: []
+  classKeyOverride: 
+  health:
+  - 200
+  - 240
+  - 280
+  - 320
+  - 360
+  - 400
+  - 440
+  - 480
+  - 520
+  - 560
+  - 600
+  - 640
+  - 680
+  - 720
+  - 760
+  healthStatModifier:
+    modifierMethod: 0
+    statModifier: 0
+  damage:
+  - 20
+  - 25
+  - 30
+  - 35
+  - 40
+  - 45
+  - 50
+  - 55
+  - 60
+  - 65
+  - 70
+  - 75
+  - 80
+  - 85
+  - 90
+  damageStatModifier:
+    modifierMethod: 0
+    statModifier: 0
+  experienceToLevel:
+  - 2000
+  - 6000
+  - 12000
+  - 20000
+  - 30000
+  - 42000
+  - 56000
+  - 72000
+  - 90000
+  - 110000
+  - 132000
+  - 156000
+  - 182000
+  - 210000
+  - 240000
+  experienceStatModifier:
+    modifierMethod: 0
+    statModifier: 0

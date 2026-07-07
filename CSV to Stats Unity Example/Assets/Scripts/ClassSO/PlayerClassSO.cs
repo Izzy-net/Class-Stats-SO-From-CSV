@@ -1,10 +1,11 @@
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections.Generic;
 
 [CreateAssetMenu(fileName = "PlayerClassSO", menuName = "Stats/NewPlayerClassSO", order = 1)]
 public class PlayerClassSO : CharacterClassSO
 {
     [SerializeField] float[] experienceToLevel;
+    [SerializeField] StatModifer experienceStatModifier;
     
     public int GetExperienceToLevel(float experience)
     {
@@ -31,5 +32,22 @@ public class PlayerClassSO : CharacterClassSO
         {
             experienceToLevel = data["Experience To Level"];
         }
+    }
+
+    protected override void ModifyData()
+    {
+        base.ModifyData();
+
+        if (experienceStatModifier.modifierMethod != ModifierMethod.None)
+        {
+            ModifyField(experienceToLevel, experienceStatModifier);
+        }
+    }
+
+    protected override void ResetModifiers()  // add statModifier = default for any new stat modifiers you add
+    {
+        base.ResetModifiers();
+
+        experienceStatModifier = default;
     }
 }

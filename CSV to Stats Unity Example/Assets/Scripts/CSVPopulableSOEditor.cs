@@ -12,7 +12,6 @@ public class CSVPopulableSOEditor : Editor
 
         if (GUILayout.Button("Populate From File"))     //create button
         {
-            Debug.Log("populate");
             myPopulableClassSO.PopulateFromCSV();   //method to run on target when button is pressed
         }
 

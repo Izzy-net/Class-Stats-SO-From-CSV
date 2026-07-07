@@ -85,7 +85,7 @@ public class CSVClassReader
                 levels += 1;
             }
         }
-        Debug.Log(levels);
+        
         return levels;
     }
 }

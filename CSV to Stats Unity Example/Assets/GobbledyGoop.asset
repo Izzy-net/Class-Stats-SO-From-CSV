@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31fde5bf7cd876c429819900a9c85227, type: 3}
+  m_Name: GobbledyGoop
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerClassSO
+  CSVFile: {fileID: 4900000, guid: dfb29ea8dde115947b394e220d772955, type: 3}
+  classKeyOverride: Player
+  health:
+  - 200
+  - 240
+  - 280
+  - 320
+  - 360
+  - 400
+  - 440
+  - 480
+  - 520
+  - 560
+  - 600
+  - 640
+  - 680
+  - 720
+  - 760
+  healthStatModifier:
+    modifierMethod: 0
+    statModifier: 0
+  damage:
+  - 10
+  - 15
+  - 20
+  - 25
+  - 30
+  - 35
+  - 40
+  - 45
+  - 50
+  - 55
+  - 60
+  - 65
+  - 70
+  - 75
+  - 80
+  damageStatModifier:
+    modifierMethod: 0
+    statModifier: 0
+  experienceToLevel:
+  - 2000
+  - 6000
+  - 12000
+  - 20000
+  - 30000
+  - 42000
+  - 56000
+  - 72000
+  - 90000
+  - 110000
+  - 132000
+  - 156000
+  - 182000
+  - 210000
+  - 240000
+  experienceStatModifier:
+    modifierMethod: 0
+    statModifier: 0

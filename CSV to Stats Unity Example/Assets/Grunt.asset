@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Grunt
   m_EditorClassIdentifier: Assembly-CSharp::EnemyClassSO
   CSVFile: {fileID: 4900000, guid: dfb29ea8dde115947b394e220d772955, type: 3}
+  classKeyOverride: 
   health:
   - 60
   - 90
@@ -29,6 +30,9 @@ MonoBehaviour:
   - 420
   - 450
   - 480
+  healthStatModifier:
+    modifierMethod: 0
+    statModifier: 0
   damage:
   - 5
   - 6
@@ -45,6 +49,9 @@ MonoBehaviour:
   - 17
   - 18
   - 19
+  damageStatModifier:
+    modifierMethod: 0
+    statModifier: 0
   experienceFromDeath:
   - 80
   - 120
@@ -61,3 +68,6 @@ MonoBehaviour:
   - 560
   - 600
   - 640
+  experienceStatModifier:
+    modifierMethod: 0
+    statModifier: 0
