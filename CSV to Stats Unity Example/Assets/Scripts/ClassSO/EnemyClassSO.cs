@@ -17,9 +17,9 @@ public class EnemyClassSO : CharacterClassSO
     {
         base.PopulateData(dictionary);
 
-        if (data.ContainsKey("Experience From Death"))
+        if (data.ContainsKey(ClassStatConsts.Enemies.EXP_FROM_DEATH))
         {
-            experienceFromDeath = data["Experience From Death"];
+            experienceFromDeath = data[ClassStatConsts.Enemies.EXP_FROM_DEATH];
         }
     }
 

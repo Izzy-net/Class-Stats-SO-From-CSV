@@ -10,14 +10,14 @@ public abstract class CSVPopulableClassSO : ScriptableObject
 
     public void PopulateFromCSV()
     {
-        CSVClassReader.ReadFile(CSVFile);    //see below note for making this more general 
-        PopulateData(CSVClassReader.GetDictionary());
+        CSVClassReader.ReadFile(CSVFile);  //reads file and sorts it into dictionary
+        PopulateData(CSVClassReader.GetDictionary());  
     }
 
     public void Modify()
     {
         ModifyData();
-        ResetModifiers();
+        ResetModifiers(); //reset values so modifications aren't accidentally re-applied
     }
 
     protected abstract void PopulateData(Dictionary<string, Dictionary<string, float[]>> dictionary);

@@ -28,9 +28,9 @@ public class PlayerClassSO : CharacterClassSO
     {
         base.PopulateData(dictionary);
 
-        if (data.ContainsKey("Experience To Level"))
+        if (data.ContainsKey(ClassStatConsts.Player.EXP_TO_LEVEL))
         {
-            experienceToLevel = data["Experience To Level"];
+            experienceToLevel = data[ClassStatConsts.Player.EXP_TO_LEVEL];
         }
     }
 

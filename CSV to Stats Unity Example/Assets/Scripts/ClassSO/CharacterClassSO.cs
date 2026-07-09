@@ -5,26 +5,36 @@ using System.Collections.Generic;
 public class CharacterClassSO : CSVPopulableClassSO
 {
     [SerializeField] string classKeyOverride;
+
     [SerializeField] float[] health;
     [SerializeField] StatModifer healthStatModifier;
 
     [SerializeField] float[] damage;
     [SerializeField] StatModifer damageStatModifier;
 
+    [SerializeField] float[] newStat;
+    [SerializeField] StatModifer newStatModifier;
+
     public override string ClassKey => this.name;
 
     protected Dictionary<string, float[]> data = new Dictionary<string, float[]>();
 
-    public float GetHealth(int level)
+    public float GetHealth(int level) //stat accessor
     {
         if (health.Length < level) return health[health.Length - 1];
         return health[(level - 1)];
     }
 
-    public float GetDamage(int level)
+    public float GetDamage(int level) //stat accessor
     {
         if (damage.Length < level) return damage[damage.Length - 1];
         return damage[level - 1];
+    }
+
+    public float GetNewStat(int level) //stat accessor
+    {
+        if (newStat.Length < level) return newStat[newStat.Length - 1];
+        return newStat[level - 1];
     }
 
     protected override void PopulateData(Dictionary<string, Dictionary<string, float[]>> dictionary)
@@ -33,15 +43,20 @@ public class CharacterClassSO : CSVPopulableClassSO
         classKey = classKeyOverride.Length > 0 ? classKeyOverride : ClassKey;
         data = dictionary[classKey];
         
-        if (data.ContainsKey("Base Health"))        //WARNING: string reference to stat name in Progression Stats spreadsheet
+        if (data.ContainsKey(ClassStatConsts.HEALTH))        //WARNING: string reference to stat name in Progression Stats spreadsheet
         {
-            health = data["Base Health"];
+            health = data[ClassStatConsts.HEALTH];
         }
 
-        if (data.ContainsKey("Base Damage"))
+        if (data.ContainsKey(ClassStatConsts.DAMAGE))
         {
-            damage = data["Base Damage"];
-        }        
+            damage = data[ClassStatConsts.DAMAGE];
+        }      
+
+        if (data.ContainsKey(ClassStatConsts.NEWSTAT))
+        {
+            newStat = data[ClassStatConsts.NEWSTAT];
+        }    
     }
 
     protected override void ModifyData()
@@ -55,12 +70,18 @@ public class CharacterClassSO : CSVPopulableClassSO
         {
             ModifyField(damage, damageStatModifier);
         }
+
+        if (newStatModifier.modifierMethod != ModifierMethod.None)
+        {
+            ModifyField(newStat, newStatModifier);
+        }
     }
 
     protected override void ResetModifiers()  // add statModifier = default for any new stat modifiers you add
     {
         healthStatModifier = default;
         damageStatModifier = default;
+        newStatModifier = default;
     }
 
     protected void ModifyField(float[] field, StatModifer modifier)
