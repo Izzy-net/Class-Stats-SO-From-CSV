@@ -77,7 +77,7 @@ public class CharacterClassSO : CSVPopulableClassSO
         }
     }
 
-    protected override void ResetModifiers()  // add statModifier = default for any new stat modifiers you add
+    protected override void ResetModifiers()
     {
         healthStatModifier = default;
         damageStatModifier = default;

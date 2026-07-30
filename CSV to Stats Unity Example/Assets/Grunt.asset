@@ -15,41 +15,45 @@ MonoBehaviour:
   CSVFile: {fileID: 4900000, guid: dfb29ea8dde115947b394e220d772955, type: 3}
   classKeyOverride: 
   health:
-  - 60
-  - 90
-  - 120
-  - 150
-  - 180
-  - 210
-  - 240
-  - 270
-  - 300
-  - 330
-  - 360
-  - 390
-  - 420
-  - 450
-  - 480
+  - 10
+  - 12
+  - 15
+  - 18
+  - 22
+  - 27
+  - 33
+  - 40
+  - 48
+  - 58
+  - 70
+  - 84
+  - 101
+  - 122
+  - 147
   healthStatModifier:
     modifierMethod: 0
     statModifier: 0
   damage:
+  - 2
+  - 3
+  - 4
   - 5
   - 6
-  - 7
   - 8
-  - 9
   - 10
-  - 11
   - 12
-  - 13
-  - 14
   - 15
-  - 16
-  - 17
   - 18
-  - 19
+  - 22
+  - 27
+  - 33
+  - 40
+  - 48
   damageStatModifier:
+    modifierMethod: 0
+    statModifier: 0
+  newStat: []
+  newStatModifier:
     modifierMethod: 0
     statModifier: 0
   experienceFromDeath:
